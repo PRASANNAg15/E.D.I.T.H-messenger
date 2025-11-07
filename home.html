@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <title>home</title>
+    <meta name="viewport" content=" width:device-width,initial-scale:1.0">
+    <link rel="icon" type="img/png" href="/messenger/img/logo.png">
+<style>
+    
+    body{
+       background-color: black;
+    }
+    #logo{
+        max-width:400px;
+        border: 2px double white;
+        border-radius: 200px;
+        display: block;
+        margin:0 auto;
+    }
+    label{
+        background-color: white;
+    }
+    div{
+         border:1px solid black;
+        text-align: center; 
+        width:fit-content;
+        margin:1px auto;
+        padding:10px; 
+       
+    }
+    #input{
+        max-width:500px;
+        height:30px;
+        border-radius: 100px;
+    }
+    h1{
+       
+        background-color: rgba(255, 255,255,0.8);
+        text-align: center;
+        width:fit-content;
+        align-items: center;
+    }
+    #load{
+        background-color:white;
+        position:absolute;
+        z-index: 9999;
+        width:100%;
+        height:100%;
+
+        }
+</style>    
+</head>
+<body>
+    <div id="load"><img src="/messenger/img/loader.gif"></div>
+    <header>
+    <img  id="logo"src="/messenger/img/logo.png" alt="logo"/>
+    </header>
+    <main>
+  <div>
+    <h1 align="center">Welcome  to the Chat</h1>
+    <form>
+        <input id="input" type="text" placeholder=" phone number">
+        <button><a href="chat.html">➤</a></button>
+    </form>
+  </div> 
+   </main>    
+</body>
+<script>
+    var loader=document.getElementById("load");
+    loader.animate([{opacity:1},{opacity:0}],{iterations:1,duration:500,fill:"forwards"});
+    setTimeout(()=>{
+        loader.style.display="none";
+    },1500);
+</script>
